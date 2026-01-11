@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://bg31ke5imykhb"]
+
+[ext_resource type="Texture2D" uid="uid://bhelmdfiicb6l" path="res://Assets/MissionFailed.png" id="1_i6soj"]
+[ext_resource type="Script" uid="uid://byk5qhf67whyi" path="res://Scripts/RetryButton.gd" id="1_plty2"]
+[ext_resource type="Texture2D" uid="uid://bwfvsq1wepgig" path="res://Assets/MissionSuccess.png" id="2_ba7o6"]
+[ext_resource type="Texture2D" uid="uid://bssihp2fmmkt0" path="res://Assets/MissionGetOut.png" id="3_plty2"]
+[ext_resource type="Texture2D" uid="uid://b6p54um2urdrg" path="res://Assets/Mission.png" id="4_hi4dn"]
+
+[node name="MessageOverlay" type="CanvasLayer"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 519.0
+offset_top = 381.0
+offset_right = 571.0
+offset_bottom = 412.0
+scale = Vector2(2, 2)
+text = "Retry"
+clip_text = true
+script = ExtResource("1_plty2")
+
+[node name="MissionFailed" type="Sprite2D" parent="."]
+position = Vector2(576, 281)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_i6soj")
+
+[node name="MissionSuccess" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 281)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("2_ba7o6")
+
+[node name="MissionGetOut" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 281)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("3_plty2")
+
+[node name="MissionCollectSamples" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 281)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("4_hi4dn")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

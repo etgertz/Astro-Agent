@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://cnblhbuw0012h"]
+
+[ext_resource type="Texture2D" uid="uid://ce5kku807gu67" path="res://Assets/Health Bar.png" id="1_knt0c"]
+[ext_resource type="Texture2D" uid="uid://ccf2olb23ip28" path="res://Assets/Charges.png" id="2_ddsy3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddsy3"]
+atlas = ExtResource("2_ddsy3")
+region = Rect2(0, 0, 48, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mb823"]
+atlas = ExtResource("2_ddsy3")
+region = Rect2(0, 8, 48, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdjdl"]
+atlas = ExtResource("2_ddsy3")
+region = Rect2(0, 16, 48, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrgx1"]
+atlas = ExtResource("2_ddsy3")
+region = Rect2(0, 24, 48, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vhyun"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddsy3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mb823")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdjdl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrgx1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}]
+
+[node name="UI Elements" type="CanvasLayer"]
+
+[node name="HealthBar" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(150, 60)
+scale = Vector2(5.2, 5.2)
+texture = ExtResource("1_knt0c")
+vframes = 2
+
+[node name="Charges" type="AnimatedSprite2D" parent="."]
+top_level = true
+z_index = 20
+position = Vector2(145, 105)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_vhyun")
