@@ -1,4 +1,4 @@
-# astro-agent
+# Astro Agent
 BU 2025 Game Jam submission. Theme: Warped
 
 [Play The Game Here!](https://bundledninja.itch.io/astro-agent)
@@ -12,4 +12,3 @@ Music by [Daelyn Elise](https://www.instagram.com/daelynemusic/?hl=en)
 Due to time constraints this is not my cleanest programming work, however it was something I really enjoyed getting to create!
 
 Looking forward to building on my game development skills to create new and inspiring gameplay.
-
